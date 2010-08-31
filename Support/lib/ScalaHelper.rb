@@ -105,7 +105,7 @@ module Scala
 		      }.select{ |line| 
     		    # If an object isn't capitalized it's probably just used as a
   		      # variable. So we don't want that poluting thel ist.
-    		    line['name'].chars.to_a.first == line['name'].chars.to_a.first.capitalize
+    		    line['name'][0,1] == line['name'][0,1].capitalize
           }		      
 		    else
 		      puts "Please create a ctags file using the Create Index File command"
