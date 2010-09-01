@@ -4,7 +4,7 @@ Scala Textmate Bundle
 About
 -----
 
-**If you're on a slightly older system Dan Oxlade is currently maintaining a 32bit compatible version of the bundle. Get it from his fork [here](http://github.com/oxlade39/scala.tmbundle "here")**
+**This is a 32bit compatible fork of the origin [bundle.](http://github.com/mads379/scala.tmbundle "bundle.")**
 
 I wasn't happy with the official [TextMate](http://macromates.com/) bundle so I started my own bundle. It has since been hugely improved by [Paul Phillips](http://github.com/paulp) and is now vastly better than the original one. It still needs some work but it is very usable (I use it for all my Scala development) 
 
@@ -13,7 +13,7 @@ Installation
 
 To install the bundle simply run the following in your terminal:
 
-<pre><code>git clone git://github.com/mads379/scala.tmbundle.git
+<pre><code>git clone git@github.com:oxlade39/scala.tmbundle.git
 open scala.tmbundle
 </code></pre>
 
