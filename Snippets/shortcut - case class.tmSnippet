@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>case class ${1:ClassName}${3:()} ${4:extends ${5:Any}}${0}</string>
+	<string>case class</string>
 	<key>name</key>
-	<string>Case class</string>
+	<string>shortcut - case class</string>
 	<key>scope</key>
 	<string>source.scala</string>
 	<key>tabTrigger</key>
 	<string>cc</string>
 	<key>uuid</key>
-	<string>493A836C-428D-4CA5-9E29-E2C927C8B642</string>
+	<string>909A1E64-9672-4FC1-87B3-608A57257E5D</string>
 </dict>
 </plist>

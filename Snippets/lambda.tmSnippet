@@ -3,18 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>object $1
-{
-	$2
-}
-</string>
+	<string>($1) =&gt; {$2}</string>
 	<key>name</key>
-	<string>Object</string>
+	<string>lambda</string>
 	<key>scope</key>
 	<string>source.scala</string>
 	<key>tabTrigger</key>
-	<string>obj</string>
+	<string>lam</string>
 	<key>uuid</key>
-	<string>97CB4393-6DCC-45B4-8830-61D6B5D036B2</string>
+	<string>92B4042E-2409-466F-A0B6-80A46B36679F</string>
 </dict>
 </plist>

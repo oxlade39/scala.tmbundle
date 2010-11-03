@@ -3,16 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>class ${1:className}${2:()} ${3:extends ${4:Any} } {
-	$0
-}</string>
+	<string>match {
+	case ${1:_} =&gt; $0
+}
+</string>
 	<key>name</key>
-	<string>Class</string>
+	<string>match</string>
 	<key>scope</key>
 	<string>source.scala</string>
 	<key>tabTrigger</key>
-	<string>c</string>
+	<string>match</string>
 	<key>uuid</key>
-	<string>E79DCC79-E834-4B6C-8280-EBE0B9A0A41F</string>
+	<string>6851152B-CD07-4E27-9932-631A86102B5C</string>
 </dict>
 </plist>

@@ -3,15 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>override def toString(): String =  $0 
-</string>
+	<string>object ${1:${TM_FILENAME/(.*)\.scala/$1/}} ${2:extends ${3:Any} }{
+	$0
+}</string>
 	<key>name</key>
-	<string>ToString</string>
+	<string>object</string>
 	<key>scope</key>
 	<string>source.scala</string>
 	<key>tabTrigger</key>
-	<string>tostr</string>
+	<string>object</string>
 	<key>uuid</key>
-	<string>E3CAD7C5-59B2-4CD2-9D9F-5D225998E2ED</string>
+	<string>97CB4393-6DCC-45B4-8830-61D6B5D036B2</string>
 </dict>
 </plist>

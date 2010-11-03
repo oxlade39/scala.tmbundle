@@ -3,14 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>for($1 &lt;- $2 to $3) yield $0</string>
+	<string>override def toString(): String =  $0 
+</string>
 	<key>name</key>
-	<string>For - Yield</string>
+	<string>toString</string>
 	<key>scope</key>
 	<string>source.scala</string>
 	<key>tabTrigger</key>
-	<string>for</string>
+	<string>tostr</string>
 	<key>uuid</key>
-	<string>E0E52BED-94DD-4D9F-8ED5-BEE344AB3FDC</string>
+	<string>E3CAD7C5-59B2-4CD2-9D9F-5D225998E2ED</string>
 </dict>
 </plist>

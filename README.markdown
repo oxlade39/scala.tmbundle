@@ -1,44 +1,20 @@
 Scala TextMate Bundle
 =====================
 
-About
------
-
-**This is a 32bit compatible fork of the origin [bundle.](http://github.com/mads379/scala.tmbundle "bundle.")**
-
-I wasn't happy with the official [TextMate](http://macromates.com/) bundle so I started my own bundle. It has since been hugely improved by [Paul Phillips](http://github.com/paulp) and is now vastly better than the original one. It still needs some work but it is very usable (I use it for all my Scala development)
-
-Installation
-------------
-
-To install the bundle simply run the following in your terminal:
-
-<pre><code>git clone git@github.com:oxlade39/scala.tmbundle.git
-open scala.tmbundle
-</code></pre>
-
-Add the shell variable <code>SCALA\_HOME</code> in TextMate -> Preferences... -> Advanced -> Shell Variables to the root of your scala installation. If you installed scala using MacPorts, it probably is <code>/opt/local/share/scala-2.8</code>
-
-Also, some of the features of the bundle uses ctags, so please add the following to your ~/.ctags file (If you haven't got one, simply create one)
-
-<pre><code>--langdef=scala
---langmap=scala:.scala
---regex-scala=/^[ \t]*class[ \t]+([a-zA-Z0-9_]+)/\1/c,classes/
---regex-scala=/^[ \t]*trait[ \t]+([a-zA-Z0-9_]+)/\1/t,traits/
---regex-scala=/^[ \t]*type[ \t]+([a-zA-Z0-9_]+)/\1/T,types/
---regex-scala=/^[ \t]*def[ \t]+([a-zA-Z0-9_\?]+)/\1/m,methods/
---regex-scala=/^[ \t]*val[ \t]+([a-zA-Z0-9_]+)/\1/C,constants/
---regex-scala=/^[ \t]*var[ \t]+([a-zA-Z0-9_]+)/\1/l,local variables/
---regex-scala=/^[ \t]*package[ \t]+([a-zA-Z0-9_.]+)/\1/p,packages/
---regex-scala=/^[ \t]*case class[ \t]+([a-zA-Z0-9_]+)/\1/c,case classes/
---regex-scala=/^[ \t]*final case class[ \t]+([a-zA-Z0-9_]+)/\1/c,case classes/
---regex-scala=/^[ \t]*object[ \t]+([a-zA-Z0-9_]+)/\1/o,objects/
---regex-scala=/^[ \t]*private def[ \t]+([a-zA-Z0-9_]+)/\1/pd,defs/</code></pre>
-
-It might work best if used in conjunction with [the theme Paul Phillips use](http://github.com/paulp/scala.tmtheme) or [the theme I use](http://github.com/mads379/Github_flavor.tmtheme) alongside it:
-
 Using it
 --------
+
+**Snippets** 
+
+As any good textmate bundle this one comes with a bunch of snippets that will make you more productive. To make it easier for you to remember all of the tab-completions the bundle strives to use the keywords as tab-triggers. As an example: If you wanted to create a new class you would simply write "class" and hit tab. If you wanted to create a case class you would type "case class" and hit tab and so on. 
+
+This of course means that the tab-triggers aren't as short as they could have been. If you're programming Scala every day you would probably prefer that you would only have to type "cc" and hit tab and it would expand into a case class. Now, Textmate doesn't allow a snippet to have multiple tab trigger (i.e. both "case class" and "cc") and having duplicated snippets would be a mess to maintain. So to fix this most of the snippets have a shorter version with expand to the "larger" version which in turn can expand to the full source. Here's and example
+
+cc &lt;tab&gt; => case class &lt;tab&gt; => proper source for a case class
+
+This means you have to hit tab twice but I think that's a fair tradeoff.
+
+**Other**
 
 First off, some of the nicest features of this bundle requires a ctags file of your project. To create one simply run the <code>Create Index File</code> command by pressing ⌃⌥⌘T.
 
@@ -50,3 +26,23 @@ First off, some of the nicest features of this bundle requires a ctags file of y
 - **Refactoring**
   - Organize imports (⌃⇧O): This will take the current selection and organize the imports alphabetically
   - Reformat Document (⌃⇧H): This will reformat the current document using [Scalariform](http://github.com/mdr/scalariform)
+
+Installation
+------------
+
+To install the bundle simply run the following in your terminal:
+
+<pre><code>git clone git://github.com/mads379/scala.tmbundle.git
+open scala.tmbundle
+</code></pre>
+
+Add the shell variable <code>SCALA\_HOME</code> in TextMate -> Preferences... -> Advanced -> Shell Variables to the root of your scala installation. If you installed scala using MacPorts, it probably is <code>/opt/local/share/scala-2.8</code>
+
+It might work best if used in conjunction with [the theme Paul Phillips use](http://github.com/paulp/scala.tmtheme) or [the theme I use](http://github.com/mads379/Github_flavor.tmtheme) alongside it:
+
+About
+-----
+
+**If you're on a slightly older system Dan Oxlade is currently maintaining a 32bit compatible version of the bundle. Get it from his fork [here](http://github.com/oxlade39/scala.tmbundle "here")**
+
+I wasn't happy with the official [TextMate](http://macromates.com/) bundle so I started my own bundle. It has since been hugely improved by [Paul Phillips](http://github.com/paulp) and is now vastly better than the original one. It still needs some work but it is very usable (I use it for all my Scala development)
