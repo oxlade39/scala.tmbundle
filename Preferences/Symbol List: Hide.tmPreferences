@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Symbol List: Hide</string>
 	<key>scope</key>
-	<string>source.scala entity.name.type</string>
+	<string>source.scala entity.name.type, entity.other.inherited-class.scala</string>
 	<key>settings</key>
 	<dict>
 		<key>showInSymbolList</key>

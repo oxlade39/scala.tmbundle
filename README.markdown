@@ -4,6 +4,8 @@ Scala TextMate Bundle
 Using it
 --------
 
+**NOTICE:** If you want fancy IDE features (code-completion, refactoring, navigation, type-checking, inspection, etc. ) use my [ENSIME.tmbundle](https://github.com/mads379/ensime.tmbundle "ENSIME.tmbundle") alongside this one.
+
 **Snippets** 
 
 As any good textmate bundle this one comes with a bunch of snippets that will make you more productive. To make it easier for you to remember all of the tab-completions the bundle strives to use the keywords as tab-triggers. As an example: If you wanted to create a new class you would simply write "class" and hit tab. If you wanted to create a case class you would type "case class" and hit tab and so on. 
@@ -14,18 +16,47 @@ cc &lt;tab&gt; => case class &lt;tab&gt; => proper source for a case class
 
 This means you have to hit tab twice but I think that's a fair tradeoff.
 
-**Other**
+**Playing with the code**
 
-First off, some of the nicest features of this bundle requires a ctags file of your project. To create one simply run the <code>Create Index File</code> command by pressing ⌃⌥⌘T.
+The bundle offers several ways to play around with Scala code in your document - Hit ⌘R and see the options possible
 
-- **Navigation (⇧⌘C)**
-  This will display a list of all the traits/classes/objects/types in the project. Simply pick the one you want and press enter and TextMate will jump to the appropriate line in the file where you declare that class/trait (etc.).
+- **Scala REPL**: This will start the Scala REPL in a new tab in the a frontmost terminal window or create a new window if one doesn't exist. 
+- **Scala REPL: Preload file** This will start the Scala REPL like above but it will preload the current file
+- **Scala REPL: Paste selection** This will paste the current selection in TextMate to active Terminal tab.
+
+**Other cool stuff**
+
+- **Align Assignments**: This will align anything according to =>,=,->,<-. As an example, the following: 
+
+	<pre>case foo => bar
+case blah if ding => baz</pre> 
+	
+	turns into 
+	
+	<pre>case foo          => bar
+case blah if ding => baz</pre> 
+	
+	The current line decides the pattern. i.e. if the current line is the first one the following: 
+	
+	<pre>def foo(body: => Unit) = 55
+def baz(somethingelse: => Unit) = 55
+val x = 22</pre>
+			
+	Turns into
+			
+	<pre>def foo(body:          => Unit) = 55
+def baz(somethingelse: => Unit) = 55
+val x = 22</pre>
+			
+	and if you select the last line it turn into
+	
+	<pre>def foo(body: => Unit)          = 55
+def baz(somethingelse: => Unit) = 55
+val x                           = 22</pre>
+
 - **Comments**
-  - Javadoc for line (⌃⇧D): Will analyze the the current line and add the appropriate documentation for the line (i.e. correct @param etc.)
-  - New javadoc line (shift-enter in comment scope): Will create a new correctly indented comment line.
-- **Refactoring**
-  - Organize imports (⌃⇧O): This will take the current selection and organize the imports alphabetically
-  - Reformat Document (⌃⇧H): This will reformat the current document using [Scalariform](http://github.com/mdr/scalariform)
+  - Javadoc for line (⌘⇧D): Will analyze the the current line and add the appropriate documentation for the line (i.e. correct @param etc.)
+  - New javadoc line (⇧⏎ in comment scope): Will create a new correctly indented comment line.
 
 Installation
 ------------

@@ -7,21 +7,20 @@
 	<key>command</key>
 	<string>#!/usr/bin/env ruby -wKU
 
-# Load the helper class.
-require ENV['TM_BUNDLE_SUPPORT'] + '/lib/ScalaHelper.rb'
-
-Scala::Helper.create_ctags_index()</string>
+print '"""${0}"""'</string>
+	<key>fallbackInput</key>
+	<string>scope</string>
 	<key>input</key>
-	<string>none</string>
-	<key>keyEquivalent</key>
-	<string>^~@t</string>
+	<string>selection</string>
 	<key>name</key>
-	<string>Create Index File</string>
+	<string>Double quoute to triple quote</string>
 	<key>output</key>
-	<string>showAsTooltip</string>
+	<string>insertAsSnippet</string>
 	<key>scope</key>
-	<string>source.scala</string>
+	<string>string.quoted.double.scala</string>
+	<key>tabTrigger</key>
+	<string>"</string>
 	<key>uuid</key>
-	<string>4D2E3F41-4796-4069-9C33-17733A632BDD</string>
+	<string>8DD4BB8E-C09D-4BC2-90F6-B4248892F325</string>
 </dict>
 </plist>

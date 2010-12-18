@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>for( $1 &lt;- ${2:${3:0} to ${4:10}}) yield $0</string>
+	<string>${1:"${2}"} -&gt; ${3:"${4}"}</string>
 	<key>name</key>
-	<string>for - Yield</string>
+	<string>right arrow</string>
 	<key>scope</key>
 	<string>source.scala</string>
 	<key>tabTrigger</key>
-	<string>for</string>
+	<string>-&gt;</string>
 	<key>uuid</key>
-	<string>E0E52BED-94DD-4D9F-8ED5-BEE344AB3FDC</string>
+	<string>53B78E1D-F3C2-49C6-89D3-6BE30961C14D</string>
 </dict>
 </plist>
